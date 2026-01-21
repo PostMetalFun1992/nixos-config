@@ -8,6 +8,7 @@
     ./terminal/git.nix
     ./terminal/scripts.nix
     ./terminal/btop.nix
+    ./terminal/helix.nix
 
     ./gui/i3.nix
     ./gui/i3status-rust.nix
@@ -54,9 +55,6 @@
     yazi
     zellij
   ];
-
-  programs.helix.enable = true;
-  xdg.configFile."helix/config.toml".source = ./helix/config.toml;
 
   programs.yazi.enable = true;
   programs.yazi.enableFishIntegration = true;
