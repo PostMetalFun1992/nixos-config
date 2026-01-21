@@ -44,19 +44,7 @@
     xkb.variant = "";
     xkb.options = "grp:win_space_toggle";
 
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        i3status-rust
-        i3lock-color
-        dunst
-        libnotify
-        feh
-        maim
-        picom
-        rofi
-      ];
-    };
+    windowManager.i3.enable = true;
   };
 
   console = {

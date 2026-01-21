@@ -6,6 +6,8 @@
     ./terminal/starship.nix
     ./terminal/git.nix
 
+    ./gui/i3.nix
+
     ./security/gpg.nix
   ]
   ++ (lib.optional (builtins.pathExists ./security/ssh.secret.nix) ./security/ssh.secret.nix);
@@ -57,7 +59,6 @@
   xdg.configFile."yazi/yazi.toml".source = ./yazi/yazi.toml;
 
   programs.i3status-rust.enable = true;
-  xdg.configFile."i3/config".source = ./i3/config;
   xdg.configFile."i3status-rust/config.toml".source = ./i3status-rust/config.toml;
 
   services.dunst.enable = true;
