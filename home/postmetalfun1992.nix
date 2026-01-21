@@ -3,6 +3,7 @@
 {
   imports = [
     ./terminal/fish.nix
+    ./terminal/starship.nix
     ./terminal/git.nix
 
     ./security/gpg.nix
@@ -44,11 +45,7 @@
     yazi
     zellij
   ];
-  
-  programs.starship = {
-   enable = true;
-  };
-  
+ 
   programs.alacritty.enable = true;
   xdg.configFile."alacritty/alacritty.toml".source = ./alacritty/alacritty.toml;
 
