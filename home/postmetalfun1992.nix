@@ -18,6 +18,7 @@
     ./gui/dunst.nix
     ./gui/picom.nix
     ./gui/rofi.nix
+    ./gui/firefox.nix
 
     ./security/gpg.nix
   ]
@@ -61,14 +62,6 @@
 
   home.file."Backgrounds".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/Backgrounds";
-
-  programs.firefox = {
-    enable = true;
-    
-    profiles.postmetalfun1992 = {
-      isDefault = true;
-    };
-  };
 
   programs.home-manager.enable = true;
 }
