@@ -6,6 +6,7 @@
     ./terminal/fish.nix
     ./terminal/starship.nix
     ./terminal/git.nix
+    ./terminal/scripts.nix
 
     ./gui/i3.nix
     ./gui/i3status-rust.nix
@@ -60,21 +61,6 @@
 
   home.file."Backgrounds".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/Backgrounds";
-
-  home.file.".local/bin/lock.sh" = {
-    source = ./scripts/lock/lock.sh; 
-    executable = true;
-  };
-
-  home.file.".local/bin/bluetooth-toggle.sh" = {
-    source = ./scripts/bluetooth-toggle/bluetooth-toggle.sh;
-    executable = true;
-  };
-  
-  home.file.".local/bin/fehbg.sh" = {
-    source = ./scripts/fehbg/fehbg.sh;
-    executable = true;
-  };
   
   services.picom.enable = true;
   xdg.configFile."picom/picom.conf".source = ./picom/picom.conf;

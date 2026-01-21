@@ -22,7 +22,7 @@ font pango:monospace 8
 exec --no-startup-id dex --autostart --environment i3
 
 # Desktop background
-exec_always --no-startup-id ~/.local/bin/fehbg.sh
+exec_always --no-startup-id fehbg
 
 # Window composer
 exec --no-startup-id picom -b
@@ -31,7 +31,7 @@ exec --no-startup-id picom -b
 exec --no-startup-id dunst
 
 # Lock screen
-exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.local/bin/lock.sh
+exec --no-startup-id xss-lock --transfer-sleep-lock -- lock
 
 # NetworkManager
 # exec --no-startup-id nm-applet
@@ -41,7 +41,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.local/bin/lock.sh
 #
 
 # Lock screen
-bindsym $mod+Shift+o exec --no-startup-id ~/.local/bin/lock.sh
+bindsym $mod+Shift+o exec --no-startup-id lock
 
 # Audio input / output
 set $refresh_i3status killall -SIGUSR1 i3status
