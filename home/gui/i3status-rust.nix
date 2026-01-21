@@ -32,13 +32,16 @@ in
               good_bg = colors.base0B;
               good_fg = colors.base00;
 
+              info_bg = colors.base0D;
+              info_fg = colors.base00;
+
               warning_bg = colors.base0A;
               warning_fg = colors.base00;
 
               critical_bg = colors.base08;
               critical_fg = colors.base00;
 
-              separator = " ";
+              separator = "";
               separator_bg = "auto";
               separator_fg = "auto";
             };
