@@ -61,6 +61,10 @@ in
 
       startup = [
         {
+          command = "${pkgs.i3}/bin/i3-msg workspace 1";
+          notification = false;
+        }
+        {
           command = "${pkgs.feh}/bin/feh --bg-fill ${config.stylix.image}";
           always = true;
           notification = false;
