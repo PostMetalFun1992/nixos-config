@@ -1,16 +1,21 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports =
     let
-      home-manager = builtins.fetchTarball https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz;
+      home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
     in
     [
       (import "${home-manager}/nixos")
     ];
 
   nixpkgs.config.allowUnfree = true;
-  
+
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.systemd-boot.configurationLimit = 5;
@@ -20,7 +25,7 @@
   networking.networkmanager.enable = true;
   time.timeZone = "Asia/Almaty";
   i18n.defaultLocale = "en_US.UTF-8";
-  
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
@@ -32,7 +37,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  
+
   services.displayManager.ly.enable = true;
 
   services.libinput.enable = true;
@@ -51,7 +56,7 @@
     font = "Lat2-Terminus16";
     useXkbConfig = true;
   };
-  
+
   environment.systemPackages = with pkgs; [
     brightnessctl
     curl
@@ -62,7 +67,7 @@
     vim
     wget
   ];
-  
+
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     font-awesome
@@ -101,7 +106,13 @@
     isNormalUser = true;
     description = "PostMetalFun1992";
     shell = pkgs.fish;
-    extraGroups = [ "wheel" "networkmanager" "video" "audio" "docker" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "video"
+      "audio"
+      "docker"
+    ];
     initialPassword = "1";
   };
 

@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -43,6 +48,7 @@
     bluetui
     claude-code
     docker-compose
+    nixfmt-rfc-style
     pass
     pinentry-curses
     pulsemixer

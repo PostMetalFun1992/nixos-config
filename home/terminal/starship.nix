@@ -6,6 +6,6 @@
   ];
 
   programs.starship = {
-   enable = true;
+    enable = true;
   };
 }

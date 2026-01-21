@@ -30,5 +30,5 @@
       d = "docker";
       dc = "docker compose";
     };
-  };  
+  };
 }

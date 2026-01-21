@@ -11,11 +11,11 @@
     ];
   };
 
-  environment.sessionVariables = { 
+  environment.sessionVariables = {
     LIBVA_DRIVER_NAME = "iHD";
   };
 
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
     intel-gpu-tools
   ];
 }
