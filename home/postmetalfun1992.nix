@@ -8,6 +8,7 @@
 
     ./gui/i3.nix
     ./gui/i3status-rust.nix
+    ./gui/dunst.nix
 
     ./security/gpg.nix
   ]
@@ -58,9 +59,6 @@
   programs.yazi.enable = true;
   programs.yazi.enableFishIntegration = true;
   xdg.configFile."yazi/yazi.toml".source = ./yazi/yazi.toml;
-
-  services.dunst.enable = true;
-  xdg.configFile."dunst/dunstrc".source = ./dunst/dunstrc;
 
   home.file."Backgrounds".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/Backgrounds";
