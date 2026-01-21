@@ -11,6 +11,7 @@
     ./terminal/helix.nix
     ./terminal/yazi.nix
     ./terminal/zellij.nix
+    ./terminal/nb.nix
 
     ./gui/i3.nix
     ./gui/i3status-rust.nix
@@ -60,8 +61,6 @@
 
   home.file."Backgrounds".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/Backgrounds";
-
-  home.file.".nbrc".source = ./nb/.nbrc;
 
   programs.firefox = {
     enable = true;
