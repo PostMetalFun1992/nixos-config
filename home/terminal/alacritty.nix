@@ -1,10 +1,30 @@
-{ pkgs, config, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.packages = with pkgs; [
     alacritty
   ];
 
-  xdg.configFile."alacritty/alacritty.toml".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/dotfiles/alacritty/alacritty.toml";
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      window = {
+        padding = {
+          x = 5;
+          y = 5;
+        };
+        title = "Alacritty";
+        decorations = "None";
+      };
+      font = {
+        size = lib.mkForce 8.5;
+        offset = {
+          x = 0;
+          y = -1;
+        };
+      };
+    };
+  };
+
+  stylix.targets.alacritty.enable = true;
 }
