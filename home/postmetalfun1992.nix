@@ -11,6 +11,7 @@
     ./gui/i3.nix
     ./gui/i3status-rust.nix
     ./gui/dunst.nix
+    ./gui/picom.nix
 
     ./security/gpg.nix
   ]
@@ -61,9 +62,6 @@
 
   home.file."Backgrounds".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/Backgrounds";
-  
-  services.picom.enable = true;
-  xdg.configFile."picom/picom.conf".source = ./picom/picom.conf;
 
   programs.zellij.enable = true;
   xdg.configFile."zellij/config.kdl".source = ./zellij/config.kdl;
