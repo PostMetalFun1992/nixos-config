@@ -16,7 +16,7 @@ in
 
     image = ../../home/Backgrounds/current.png;
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
 
     fonts = {
       monospace = {
