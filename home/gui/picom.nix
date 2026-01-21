@@ -7,8 +7,29 @@
 
   services.picom = {
     enable = true;
-  };
+    backend = "glx";
+    vSync = true;
+    shadow = false;
+    fade = true;
+    fadeDelta = 3;
+    fadeSteps = [
+      0.08
+      0.08
+    ];
 
-  xdg.configFile."picom/picom.conf".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/dotfiles/picom/picom.conf";
+    opacityRules = [
+      "100:class_g = 'Firefox' && argb"
+      "100:class_g = 'mpv'"
+      "100:class_g = 'vlc'"
+      "100:fullscreen"
+    ];
+
+    settings = {
+      glx-no-stencil = true;
+      glx-copy-from-front = false;
+      use-damage = true;
+      blur-background = false;
+      inactive-dim = 0.2;
+    };
+  };
 }
