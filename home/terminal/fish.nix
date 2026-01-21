@@ -1,6 +1,12 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    bat
+    eza
+    fish
+  ];
+
   programs.fish = {
     enable = true;
 

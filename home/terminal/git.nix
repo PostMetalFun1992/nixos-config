@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    git
+    tig
+  ];
+
   programs.git = {
     enable = true;
     settings.user = {

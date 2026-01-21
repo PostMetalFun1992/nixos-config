@@ -40,24 +40,13 @@
   };
 
   home.packages = with pkgs; [
-    alacritty
-    bat
     bluetui
-    btop
     claude-code
-    eza
-    firefox
-    glow
-    gnupg
-    helix
-    nb
+    docker-compose
     pass
     pinentry-curses
     pulsemixer
-    tig
     uv
-    yazi
-    zellij
   ];
 
   home.file."Backgrounds".source =

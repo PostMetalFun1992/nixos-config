@@ -55,7 +55,6 @@
   environment.systemPackages = with pkgs; [
     brightnessctl
     curl
-    docker-compose
     git
     pciutils
     pulseaudio
