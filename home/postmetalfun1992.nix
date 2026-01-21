@@ -13,6 +13,7 @@
     ./gui/i3status-rust.nix
     ./gui/dunst.nix
     ./gui/picom.nix
+    ./gui/rofi.nix
 
     ./security/gpg.nix
   ]
@@ -66,8 +67,6 @@
 
   programs.zellij.enable = true;
   xdg.configFile."zellij/config.kdl".source = ./zellij/config.kdl;
-
-  xdg.configFile."rofi/config.rasi".source = ./rofi/config.rasi;
 
   home.file.".nbrc".source = ./nb/.nbrc;
 
