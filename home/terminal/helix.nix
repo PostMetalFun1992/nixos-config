@@ -5,6 +5,25 @@
     helix
   ];
 
-  xdg.configFile."helix/config.toml".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/dotfiles/helix/config.toml";
+  programs.helix = {
+    enable = true;
+
+    settings = {
+      editor = {
+        line-number = "relative";
+        mouse = false;
+        cursor-shape = {
+          insert = "bar";
+          normal = "block";
+          select = "underline";
+        };
+        indent-guides = {
+          render = true;
+          character = "|";
+        };
+      };
+    };
+  };
+
+  stylix.targets.helix.enable = true;
 }
