@@ -10,6 +10,7 @@
     ./terminal/btop.nix
     ./terminal/helix.nix
     ./terminal/yazi.nix
+    ./terminal/zellij.nix
 
     ./gui/i3.nix
     ./gui/i3status-rust.nix
@@ -59,9 +60,6 @@
 
   home.file."Backgrounds".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/Backgrounds";
-
-  programs.zellij.enable = true;
-  xdg.configFile."zellij/config.kdl".source = ./zellij/config.kdl;
 
   home.file.".nbrc".source = ./nb/.nbrc;
 
