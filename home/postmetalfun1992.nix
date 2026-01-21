@@ -4,8 +4,10 @@
   imports = [
     ./terminal/fish.nix
     ./terminal/git.nix
+
+    ./security/gpg.nix
   ]
-  ++ (lib.optional (builtins.pathExists ./private.secret.nix) ./private.secret.nix);
+  ++ (lib.optional (builtins.pathExists ./security/ssh.secret.nix) ./security/ssh.secret.nix);
 
   home.username = "postmetalfun1992";
   home.homeDirectory = "/home/postmetalfun1992";
@@ -81,13 +83,7 @@
     source = ./scripts/fehbg/fehbg.sh;
     executable = true;
   };
-
-  services.ssh-agent.enable = true;
-  programs.ssh = {
-    enable = true;
-    enableDefaultConfig = false;
-  };
-
+  
   services.picom.enable = true;
   xdg.configFile."picom/picom.conf".source = ./picom/picom.conf;
 
@@ -99,12 +95,6 @@
   xdg.configFile."btop/btop.conf".source = ./btop/btop.conf;
 
   home.file.".nbrc".source = ./nb/.nbrc;
-
-  services.gpg-agent = {
-    enable = true;
-    defaultCacheTtl = 3600;
-    pinentry.package = pkgs.pinentry-curses;
-  };
 
   programs.firefox = {
     enable = true;
