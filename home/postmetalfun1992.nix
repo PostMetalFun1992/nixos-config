@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./terminal/alacritty.nix
     ./terminal/fish.nix
     ./terminal/starship.nix
     ./terminal/git.nix
@@ -49,9 +50,6 @@
     yazi
     zellij
   ];
- 
-  programs.alacritty.enable = true;
-  xdg.configFile."alacritty/alacritty.toml".source = ./alacritty/alacritty.toml;
 
   programs.helix.enable = true;
   xdg.configFile."helix/config.toml".source = ./helix/config.toml;
