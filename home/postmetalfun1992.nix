@@ -9,6 +9,7 @@
     ./terminal/scripts.nix
     ./terminal/btop.nix
     ./terminal/helix.nix
+    ./terminal/yazi.nix
 
     ./gui/i3.nix
     ./gui/i3status-rust.nix
@@ -55,10 +56,6 @@
     yazi
     zellij
   ];
-
-  programs.yazi.enable = true;
-  programs.yazi.enableFishIntegration = true;
-  xdg.configFile."yazi/yazi.toml".source = ./yazi/yazi.toml;
 
   home.file."Backgrounds".source =
     config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/Backgrounds";
