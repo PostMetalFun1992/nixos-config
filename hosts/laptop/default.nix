@@ -16,7 +16,7 @@ in
 
     image = ../../home/Backgrounds/current.png;
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/monokai.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
 
     fonts = {
       monospace = {
