@@ -7,6 +7,7 @@
 
   programs.alacritty = {
     enable = true;
+
     settings = {
       window = {
         padding = {
@@ -16,6 +17,7 @@
         title = "Alacritty";
         decorations = "None";
       };
+
       font = {
         size = lib.mkForce 8.5;
         offset = {
