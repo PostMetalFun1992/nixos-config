@@ -5,6 +5,20 @@
     yazi
   ];
 
-  xdg.configFile."yazi/yazi.toml".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/dotfiles/yazi/yazi.toml";
+  programs.yazi = {
+    enable = true;
+
+    enableFishIntegration = true;
+
+    settings = {
+      manager = {
+        show_hidden = true;
+        sort_by = "natural";
+        sort_dir_first = true;
+        linemode = "none";
+      };
+    };
+  };
+
+  stylix.targets.yazi.enable = true;
 }
