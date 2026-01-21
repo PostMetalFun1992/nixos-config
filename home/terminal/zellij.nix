@@ -1,10 +1,26 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 
 {
   home.packages = with pkgs; [
     zellij
   ];
 
-  xdg.configFile."zellij/config.kdl".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/dotfiles/zellij/config.kdl";
+  programs.zellij = {
+    enable = true;
+
+    enableFishIntegration = false;
+
+    settings = {
+      default_layout = "compact";
+      pane_frames = false;
+      copy_on_select = true;
+    };
+  };
+
+  stylix.targets.zellij.enable = true;
 }
