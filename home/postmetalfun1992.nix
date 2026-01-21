@@ -7,6 +7,7 @@
     ./terminal/starship.nix
     ./terminal/git.nix
     ./terminal/scripts.nix
+    ./terminal/btop.nix
 
     ./gui/i3.nix
     ./gui/i3status-rust.nix
@@ -67,8 +68,6 @@
   xdg.configFile."zellij/config.kdl".source = ./zellij/config.kdl;
 
   xdg.configFile."rofi/config.rasi".source = ./rofi/config.rasi;
-
-  xdg.configFile."btop/btop.conf".source = ./btop/btop.conf;
 
   home.file.".nbrc".source = ./nb/.nbrc;
 
