@@ -10,6 +10,7 @@ in
     ../../common.nix
     (import stylix-source).nixosModules.stylix
   ];
+
   stylix = {
     enable = true;
     autoEnable = false;
@@ -40,4 +41,8 @@ in
       };
     };
   };
+
+  services.xserver.displayManager.setupCommands = ''
+    ${pkgs.xorg.xrandr}/bin/xrandr --output eDP-1 --mode 1920x1080 --rate 60
+  '';
 }
