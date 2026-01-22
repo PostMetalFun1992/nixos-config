@@ -27,6 +27,8 @@
 
     ./security/gpg.nix
     ./security/ssh.nix
+
+    ./services/udiskie.nix
   ];
 
   home.username = "postmetalfun1992";
