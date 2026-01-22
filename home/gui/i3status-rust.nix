@@ -18,12 +18,12 @@ in
 
     bars = {
       default = {
-        theme = "native";
+        theme = "modern";
         icons = "material-nf";
 
         settings = {
           theme = {
-            theme = "native";
+            theme = "modern";
 
             overrides = {
               idle_bg = colors.base01;
@@ -41,7 +41,6 @@ in
               critical_bg = colors.base08;
               critical_fg = colors.base00;
 
-              separator = "";
               separator_bg = "auto";
               separator_fg = "auto";
             };
