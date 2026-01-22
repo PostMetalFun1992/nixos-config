@@ -6,14 +6,6 @@
 }:
 
 {
-  imports =
-    let
-      home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-25.11.tar.gz";
-    in
-    [
-      (import "${home-manager}/nixos")
-    ];
-
   nixpkgs.config.allowUnfree = true;
 
   boot.loader.efi.canTouchEfiVariables = true;
@@ -125,11 +117,7 @@
     initialPassword = "1";
   };
 
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users.postmetalfun1992 = import ./home/postmetalfun1992.nix;
-  };
+  home-manager.users.postmetalfun1992 = import ./home/postmetalfun1992.nix;
 
   system.stateVersion = "25.11";
 }

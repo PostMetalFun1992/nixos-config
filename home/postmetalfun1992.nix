@@ -26,8 +26,8 @@
     ./gui/firefox.nix
 
     ./security/gpg.nix
-  ]
-  ++ (lib.optional (builtins.pathExists ./security/ssh.secret.nix) ./security/ssh.secret.nix);
+    ./security/ssh.nix
+  ];
 
   home.username = "postmetalfun1992";
   home.homeDirectory = "/home/postmetalfun1992";

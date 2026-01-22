@@ -1,14 +1,16 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  ...
+}:
 
-let
-  stylix-source = builtins.fetchTarball "https://github.com/danth/stylix/archive/release-24.11.tar.gz";
-in
 {
   imports = [
     ./hardware-configuration.nix
     ../../modules/gpu-intel.nix
     ../../common.nix
-    (import stylix-source).nixosModules.stylix
   ];
 
   stylix = {
