@@ -2,6 +2,6 @@
 
 {
   home.sessionPath = [
-    "${config.home.homeDirectory}/nixos-config/home/dotfiles/bin/"
+    "${config.home.homeDirectory}/nixos-config/home/scripts"
   ];
 }
