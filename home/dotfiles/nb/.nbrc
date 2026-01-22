@@ -16,3 +16,5 @@
 export EDITOR="helix"
 export NB_MARKDOWN_TOOL="glow"
 export NB_DIRECTORY_TOOL="eza"
+export NB_AUTO_SYNC="0"
+export NB_GIT_AUTO_COMMIT="1"
