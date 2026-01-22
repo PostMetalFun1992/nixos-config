@@ -48,7 +48,7 @@ in
 
           fonts = {
             names = [ config.stylix.fonts.monospace.name ];
-            size = 10.0;
+            size = config.stylix.fonts.sizes.desktop * 1.0;
           };
 
           colors = {

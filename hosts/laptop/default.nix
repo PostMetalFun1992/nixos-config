@@ -31,6 +31,13 @@ in
         package = pkgs.dejavu_fonts;
         name = "DejaVu Serif";
       };
+
+      sizes = {
+        terminal = 9;
+        applications = 12;
+        desktop = 11;
+        popups = 16;
+      };
     };
   };
 }

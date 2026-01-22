@@ -18,7 +18,7 @@
       global = {
         monitor = 0;
         follow = "mouse";
-        width = 300;
+        width = 360;
         height = 200;
         origin = "top-right";
         offset = "20x20";
@@ -29,7 +29,7 @@
         gap_size = 8;
         separator_height = 2;
         separator_color = lib.mkForce "frame";
-        font = lib.mkForce "${config.stylix.fonts.monospace.name} 10";
+        font = lib.mkForce "${config.stylix.fonts.monospace.name} ${toString config.stylix.fonts.sizes.popups}";
         format = "<b>%s</b>\\n%b";
         icon_position = "left";
         max_icon_size = 48;

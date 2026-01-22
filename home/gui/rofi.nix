@@ -17,7 +17,7 @@
     terminal = "${pkgs.alacritty}/bin/alacritty";
     location = "center";
 
-    font = lib.mkForce "${config.stylix.fonts.monospace.name} 14";
+    font = lib.mkForce "${config.stylix.fonts.monospace.name} ${toString config.stylix.fonts.sizes.popups}";
 
     extraConfig = {
       modi = "drun";
