@@ -50,8 +50,8 @@
     bluetui
     claude-code
     docker-compose
-    nixfmt-rfc-style
     pass
+    pkgs.nixfmt
     pinentry-curses
     pulsemixer
     uv
