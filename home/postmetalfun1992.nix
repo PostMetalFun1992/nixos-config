@@ -48,13 +48,11 @@
 
   home.packages = with pkgs; [
     bluetui
-    claude-code
     docker-compose
     pass
     pkgs.nixfmt
     pinentry-curses
     pulsemixer
-    uv
   ];
 
   home.file."Backgrounds".source =
