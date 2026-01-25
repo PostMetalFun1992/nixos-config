@@ -38,6 +38,9 @@
   home.stateVersion = "25.11";
 
   home.sessionVariables = {
+    XKB_DEFAULT_LAYOUT = "us,ru";
+    XKB_DEFAULT_OPTIONS = "grp:win_space_toggle";
+
     TERMINAL = "alacritty";
 
     EDITOR = "hx";

@@ -1,4 +1,4 @@
-{ pkgs, styling, ... }: # <-- Принимаем myTheme
+{ pkgs, styling, ... }:
 
 {
   programs.fuzzel = {
