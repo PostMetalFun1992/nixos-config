@@ -9,6 +9,7 @@
     enable = true;
 
     settings = {
+      color_theme = "tokyo-night";
       truecolor = true;
       rounded_corners = true;
       graph_symbol = "braille";
@@ -78,6 +79,4 @@
       rsmi_measure_pcie_speeds = true;
     };
   };
-
-  stylix.targets.btop.enable = true;
 }
