@@ -61,6 +61,11 @@
     windowManager.i3.enable = true;
   };
 
+  programs.river = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   console = {
     font = "Lat2-Terminus16";
     useXkbConfig = true;
