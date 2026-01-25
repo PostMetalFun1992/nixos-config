@@ -9,6 +9,8 @@
     enable = true;
 
     settings = {
+      theme = "tokyonight";
+
       editor = {
         line-number = "relative";
         mouse = false;
@@ -24,6 +26,4 @@
       };
     };
   };
-
-  stylix.targets.helix.enable = true;
 }
