@@ -1,12 +1,32 @@
-{ pkgs, styling, ... }:
+{
+  pkgs,
+  styling,
+  lib,
+  ...
+}:
 
+let
+  tags = [
+    "1"
+    "2"
+    "3"
+    "4"
+    "5"
+  ];
+in
 {
   xdg.configFile."river/init" = {
     executable = true;
     text = ''
       #!/bin/sh
 
-      ## Tiling generator
+      ## Inputs
+      riverctl input * xkb-layout "us,ru"
+      riverctl input * xkb-options "grp:win_space_toggle"
+
+      riverctl input * tap enabled
+
+      ## Tiling
       riverctl default-layout rivertile
       rivertile -view-padding ${toString styling.windowManager.paddings.inner} \
                 -outer-padding ${toString styling.windowManager.paddings.outer} &
@@ -27,6 +47,20 @@
 
       # Exit
       riverctl map normal Super+Shift E exit
+
+      ## Workspaces
+      ${lib.concatMapStringsSep "\n" (
+        tag:
+        let
+          mask = toString ("");
+        in
+        ''
+          # Tag ${tag}
+          riverctl map normal Super ${tag} set-focused-tags $((1 << (${tag} - 1)))
+          riverctl map normal Super+Shift ${tag} set-view-tags $((1 << (${tag} - 1)))
+          riverctl map normal Super+Control ${tag} toggle-focused-tags $((1 << (${tag} - 1)))
+        ''
+      ) tags}
     '';
   };
 }
