@@ -20,6 +20,10 @@ in
     text = ''
       #!/bin/sh
 
+      ## Wallpaper
+      pkill swaybg
+      swaybg -i "${styling.wallpaper}" -m fill &
+
       ## Inputs
       riverctl input * xkb-layout "us,ru"
       riverctl input * xkb-options "grp:win_space_toggle"
@@ -28,8 +32,7 @@ in
 
       ## Tiling
       riverctl default-layout rivertile
-      rivertile -view-padding ${toString styling.windowManager.paddings.inner} \
-                -outer-padding ${toString styling.windowManager.paddings.outer} &
+      rivertile -view-padding 5 -outer-padding 5 &
 
       ## Input
       riverctl input-config-type touchpad tap enabled

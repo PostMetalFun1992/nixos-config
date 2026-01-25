@@ -59,6 +59,7 @@
     pkgs.nixfmt
     pinentry-curses
     pulsemixer
+    swaybg
   ];
 
   home.file."Backgrounds".source =

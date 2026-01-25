@@ -4,10 +4,5 @@
     terminalSize = 16;
   };
 
-  windowManager = {
-    paddings = {
-      inner = 5;
-      outer = 5;
-    };
-  };
+  wallpaper = ../../backgrounds/nix-snowflake.png;
 }
