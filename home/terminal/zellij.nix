@@ -21,6 +21,4 @@
       copy_on_select = true;
     };
   };
-
-  stylix.targets.zellij.enable = true;
 }

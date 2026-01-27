@@ -11,18 +11,12 @@
     ./terminal/fish.nix
     ./terminal/starship.nix
     ./terminal/git.nix
-    ./terminal/scripts.nix
     ./terminal/btop.nix
     ./terminal/helix.nix
     ./terminal/yazi.nix
     ./terminal/zellij.nix
     ./terminal/nb.nix
 
-    ./gui/i3.nix
-    ./gui/i3status-rust.nix
-    ./gui/dunst.nix
-    ./gui/picom.nix
-    ./gui/rofi.nix
     ./gui/fuzzel.nix
     ./gui/river.nix
     ./gui/firefox.nix
@@ -61,9 +55,6 @@
     pulsemixer
     swaybg
   ];
-
-  home.file."Backgrounds".source =
-    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/Backgrounds";
 
   programs.home-manager.enable = true;
 }
