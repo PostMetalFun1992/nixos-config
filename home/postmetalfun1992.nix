@@ -20,7 +20,6 @@
     ./gui/sway.nix
 
     ./gui/fuzzel.nix
-    ./gui/river.nix
     ./gui/firefox.nix
 
     ./security/gpg.nix
@@ -57,6 +56,9 @@
     pulsemixer
     swaybg
   ];
+
+  home.file."backgrounds".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/backgrounds";
 
   programs.home-manager.enable = true;
 }

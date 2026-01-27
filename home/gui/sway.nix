@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    swaybg
+  ];
+
   wayland.windowManager.sway = {
     config = null;
   };
