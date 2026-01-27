@@ -10,15 +10,6 @@
     zellij
   ];
 
-  programs.zellij = {
-    enable = true;
-
-    enableFishIntegration = false;
-
-    settings = {
-      default_layout = "compact";
-      pane_frames = false;
-      copy_on_select = true;
-    };
-  };
+  xdg.configFile."zellij".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/configs/zellij";
 }
