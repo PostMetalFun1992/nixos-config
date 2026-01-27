@@ -114,6 +114,25 @@
     };
   };
 
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+
+    extraPortals = [
+      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
+    ];
+
+    config = {
+      river = {
+        default = [ "wlr" ];
+        "org.freedesktop.impl.portal.Desktop" = [ "gtk" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+        "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
+      };
+    };
+  };
+
   users.users.postmetalfun1992 = {
     isNormalUser = true;
     description = "PostMetalFun1992";
