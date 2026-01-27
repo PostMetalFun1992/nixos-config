@@ -5,25 +5,6 @@
     helix
   ];
 
-  programs.helix = {
-    enable = true;
-
-    settings = {
-      theme = "tokyonight";
-
-      editor = {
-        line-number = "relative";
-        mouse = false;
-        cursor-shape = {
-          insert = "bar";
-          normal = "block";
-          select = "underline";
-        };
-        indent-guides = {
-          render = true;
-          character = "|";
-        };
-      };
-    };
-  };
+  xdg.configFile."helix".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/configs/helix";
 }
