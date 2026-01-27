@@ -1,15 +1,10 @@
-{ pkgs, styling, ... }:
+{ config, pkgs, ... }:
 
 {
-  programs.fuzzel = {
-    enable = true;
-    settings = {
-      main = {
-        font = styling.font.family;
-        prompt = "\"> \"";
-        layer = "overlay";
-        width = 40;
-      };
-    };
-  };
+  home.packages = with pkgs; [
+    fuzzel
+  ];
+
+  xdg.configFile."fuzzel".source =
+    config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos-config/home/configs/fuzzel";
 }
