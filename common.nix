@@ -66,6 +66,12 @@
     xwayland.enable = true;
   };
 
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
+  programs.xwayland.enable = true;
+
   console = {
     font = "Lat2-Terminus16";
     useXkbConfig = true;

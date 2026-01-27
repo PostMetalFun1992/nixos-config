@@ -17,6 +17,8 @@
     ./terminal/zellij.nix
     ./terminal/nb.nix
 
+    ./gui/sway.nix
+
     ./gui/fuzzel.nix
     ./gui/river.nix
     ./gui/firefox.nix
