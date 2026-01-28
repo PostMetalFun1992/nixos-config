@@ -8,5 +8,8 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ t
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-# Special key to take a screenshot with grim
-bindsym Print exec grim
+# Select screen area + copy to buffer
+bindsym Shift+p exec grim -g "$(slurp)" - | wl-copy
+
+# Entire screen
+bindsym Ctrl+p exec grim - | wl-copy

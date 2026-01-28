@@ -54,7 +54,7 @@
     pkgs.nixfmt
     pinentry-curses
     pulsemixer
-    xclip
+    wl-clipboard
   ];
 
   home.file."backgrounds".source =
