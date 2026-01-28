@@ -48,13 +48,13 @@
 
   home.packages = with pkgs; [
     bluetui
-    fuzzel
     docker-compose
+    maim
     pass
     pkgs.nixfmt
     pinentry-curses
     pulsemixer
-    swaybg
+    xclip
   ];
 
   home.file."backgrounds".source =
