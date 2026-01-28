@@ -231,9 +231,10 @@ client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
 bar {
-    position top
+    font pango:JetBrainsMono Nerd Font 12
+    height 24
 
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command i3status-rs ~/.config/i3status-rust/config.toml
 
     colors {
         background         $base
