@@ -18,6 +18,7 @@
     ./terminal/nb.nix
 
     ./gui/sway.nix
+    ./gui/swaylock.nix
     ./gui/i3status-rust.nix
     ./gui/fuzzel.nix
     ./gui/firefox.nix
