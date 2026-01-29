@@ -61,11 +61,6 @@
     windowManager.i3.enable = true;
   };
 
-  programs.river = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
