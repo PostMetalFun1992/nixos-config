@@ -7,7 +7,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix.url = "github:danth/stylix";
   };
 
   outputs =
@@ -15,7 +14,6 @@
       self,
       nixpkgs,
       home-manager,
-      stylix,
       ...
     }@inputs:
     {
@@ -29,14 +27,12 @@
             ./hosts/laptop/default.nix
 
             home-manager.nixosModules.home-manager
-            stylix.nixosModules.stylix
 
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
                 inherit inputs;
-                styling = import ./hosts/laptop/styling.nix;
               };
               home-manager.backupFileExtension = "backup";
             }
