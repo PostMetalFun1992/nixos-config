@@ -45,21 +45,15 @@
   };
   security.rtkit.enable = true;
 
-  services.displayManager.ly.enable = true;
+  services.displayManager.ly = {
+    enable = true;
+  };
 
   services.libinput.enable = true;
 
   services.udisks2.enable = true;
 
-  services.xserver = {
-    enable = true;
-
-    xkb.layout = "us,ru";
-    xkb.variant = "";
-    xkb.options = "grp:win_space_toggle";
-
-    windowManager.i3.enable = true;
-  };
+  programs.fish.enable = true;
 
   programs.sway = {
     enable = true;
@@ -87,8 +81,6 @@
     nerd-fonts.jetbrains-mono
     font-awesome
   ];
-
-  programs.fish.enable = true;
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
