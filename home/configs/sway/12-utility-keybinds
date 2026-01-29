@@ -9,10 +9,10 @@ bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # Screenshot: Select screen area + copy to buffer
-bindsym Shift+p exec grim -g "$(slurp)" - | wl-copy
+bindsym $mod+Shift+p exec grim -g "$(slurp)" - | wl-copy
 
 # Screenshot: Entire screen
-bindsym Ctrl+p exec grim - | wl-copy
+bindsym $mod+Ctrl+p exec grim - | wl-copy
 
 # Lock screen
 bindsym $mod+Shift+b exec swaylock -f
