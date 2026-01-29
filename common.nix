@@ -135,6 +135,7 @@
         "org.freedesktop.impl.portal.Desktop" = [ "gtk" ];
         "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
         "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
+        "org.freedesktop.impl.portal.Screencast" = [ "wlr" ];
       };
     };
   };

@@ -34,9 +34,6 @@
   home.stateVersion = "25.11";
 
   home.sessionVariables = {
-    XKB_DEFAULT_LAYOUT = "us,ru";
-    XKB_DEFAULT_OPTIONS = "grp:win_space_toggle";
-
     TERMINAL = "alacritty";
 
     EDITOR = "hx";
@@ -45,6 +42,9 @@
 
     DOCKER_BUILDKIT = "1";
     COMPOSE_DOCKER_CLI_BUILD = "1";
+
+    MOZ_ENABLE_WAYLAND = "1";
+    XDG_CURRENT_DESKTOP = "sway";
   };
 
   home.packages = with pkgs; [

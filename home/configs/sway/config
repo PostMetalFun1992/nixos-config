@@ -1,5 +1,7 @@
 include 01-variables
 
+include config.d/*
+
 include 02-inputs
 include 03-outputs
 include 04-idle
