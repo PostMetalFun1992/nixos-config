@@ -21,6 +21,7 @@
     ./gui/swaylock.nix
     ./gui/i3status-rust.nix
     ./gui/fuzzel.nix
+    ./gui/mako.nix
     ./gui/firefox.nix
 
     ./security/gpg.nix
