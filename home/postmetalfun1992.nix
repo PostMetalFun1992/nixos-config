@@ -50,12 +50,9 @@
 
   home.packages = with pkgs; [
     bluetui
-    docker-compose
     maim
     pass
-    pkgs.nixfmt
     pinentry-curses
-    pulsemixer
     wl-clipboard
   ];
 

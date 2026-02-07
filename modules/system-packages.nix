@@ -7,8 +7,10 @@
     curl
     devenv
     git
+    nixfmt
     pciutils
     pulseaudio
+    pulsemixer
     usbutils
     vim
     wget
