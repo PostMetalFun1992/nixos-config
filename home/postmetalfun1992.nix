@@ -14,7 +14,6 @@
     ./terminal/btop.nix
     ./terminal/helix.nix
     ./terminal/yazi.nix
-    ./terminal/zellij.nix
     ./terminal/nb.nix
 
     ./gui/sway.nix
