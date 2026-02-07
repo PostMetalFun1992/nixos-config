@@ -22,15 +22,8 @@
   time.timeZone = "Asia/Almaty";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-
   services.libinput.enable = true;
-
   services.udisks2.enable = true;
-
   programs.fish.enable = true;
 
   console = {

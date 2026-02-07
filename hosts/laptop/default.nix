@@ -11,6 +11,7 @@
     ./hardware-configuration.nix
     ./gpu-intel.nix
 
+    ../../modules/system/bluetooth.nix
     ../../modules/system/common.nix
     ../../modules/system/display-manager.nix
     ../../modules/system/fonts.nix
