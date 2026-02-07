@@ -25,8 +25,6 @@
   time.timeZone = "Asia/Almaty";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.udisks2.enable = true;
-
   console = {
     font = "Lat2-Terminus16";
     useXkbConfig = true;

@@ -13,6 +13,7 @@
 
     ../../modules/bluetooth.nix
     ../../modules/common.nix
+    ../../modules/disk-mount.nix
     ../../modules/display-manager.nix
     ../../modules/fonts.nix
     ../../modules/sound.nix
