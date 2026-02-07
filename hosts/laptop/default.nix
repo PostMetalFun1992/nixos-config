@@ -9,10 +9,11 @@
 {
   imports = [
     ./hardware-configuration.nix
-
-    ../../modules/gpu-intel.nix
+    ./gpu-intel.nix
 
     ../../modules/system/common.nix
+    ../../modules/system/sound.nix
+
     ../../modules/virtualization/default.nix
   ];
 }
