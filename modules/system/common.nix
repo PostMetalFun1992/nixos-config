@@ -27,21 +27,11 @@
     powerOnBoot = true;
   };
 
-  services.displayManager.ly = {
-    enable = true;
-  };
-
   services.libinput.enable = true;
 
   services.udisks2.enable = true;
 
   programs.fish.enable = true;
-
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
-  };
-  programs.xwayland.enable = true;
 
   console = {
     font = "Lat2-Terminus16";
@@ -62,6 +52,7 @@
   ];
 
   programs.nix-ld.enable = true;
+
   programs.nix-ld.libraries = with pkgs; [
     gcc
     glib
@@ -72,26 +63,6 @@
     stdenv.cc.cc.lib
     zlib
   ];
-
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-
-    extraPortals = [
-      pkgs.xdg-desktop-portal-wlr
-      pkgs.xdg-desktop-portal-gtk
-    ];
-
-    config = {
-      river = {
-        default = [ "wlr" ];
-        "org.freedesktop.impl.portal.Desktop" = [ "gtk" ];
-        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
-        "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
-        "org.freedesktop.impl.portal.Screencast" = [ "wlr" ];
-      };
-    };
-  };
 
   home-manager.users.postmetalfun1992 = import ../../home/postmetalfun1992.nix;
 
