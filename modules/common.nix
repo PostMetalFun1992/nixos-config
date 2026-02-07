@@ -21,12 +21,11 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.networkmanager.enable = true;
+
   time.timeZone = "Asia/Almaty";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  services.libinput.enable = true;
   services.udisks2.enable = true;
-  programs.fish.enable = true;
 
   console = {
     font = "Lat2-Terminus16";
