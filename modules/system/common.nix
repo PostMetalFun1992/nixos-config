@@ -38,32 +38,6 @@
     useXkbConfig = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    brightnessctl
-    cachix
-    curl
-    devenv
-    git
-    pciutils
-    pulseaudio
-    usbutils
-    vim
-    wget
-  ];
-
-  programs.nix-ld.enable = true;
-
-  programs.nix-ld.libraries = with pkgs; [
-    gcc
-    glib
-    gnumake
-    icu
-    openssl
-    pkg-config
-    stdenv.cc.cc.lib
-    zlib
-  ];
-
   home-manager.users.postmetalfun1992 = import ../../home/postmetalfun1992.nix;
 
   system.stateVersion = "25.11";
