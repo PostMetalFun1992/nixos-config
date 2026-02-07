@@ -35,6 +35,7 @@
                 inherit inputs;
               };
               home-manager.backupFileExtension = "backup";
+              home-manager.users.postmetalfun1992 = import ./home/postmetalfun1992.nix;
             }
           ];
         };

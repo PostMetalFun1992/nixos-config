@@ -6,6 +6,8 @@
 }:
 
 {
+  system.stateVersion = "25.11";
+
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [
     "nix-command"
@@ -30,8 +32,4 @@
     font = "Lat2-Terminus16";
     useXkbConfig = true;
   };
-
-  home-manager.users.postmetalfun1992 = import ../home/postmetalfun1992.nix;
-
-  system.stateVersion = "25.11";
 }
