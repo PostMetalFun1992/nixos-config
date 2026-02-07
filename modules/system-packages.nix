@@ -3,9 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     brightnessctl
-    cachix
     curl
-    devenv
     git
     nixfmt
     pciutils

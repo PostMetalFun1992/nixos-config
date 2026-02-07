@@ -14,7 +14,6 @@
     ./terminal/btop.nix
     ./terminal/helix.nix
     ./terminal/yazi.nix
-    ./terminal/nb.nix
 
     ./gui/sway.nix
     ./gui/swaylock.nix
@@ -23,7 +22,6 @@
     ./gui/mako.nix
     ./gui/firefox.nix
 
-    ./security/gpg.nix
     ./security/ssh.nix
 
     ./services/udiskie.nix
@@ -50,8 +48,6 @@
   home.packages = with pkgs; [
     bluetui
     maim
-    pass
-    pinentry-curses
     wl-clipboard
   ];
 
