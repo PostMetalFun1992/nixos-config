@@ -5,4 +5,6 @@
     nerd-fonts.jetbrains-mono
     font-awesome
   ];
+
+  fonts.fontDir.enable = true;
 }
