@@ -68,7 +68,9 @@
 
   environment.systemPackages = with pkgs; [
     brightnessctl
+    cachix
     curl
+    devenv
     git
     pciutils
     pulseaudio
@@ -93,19 +95,6 @@
     stdenv.cc.cc.lib
     zlib
   ];
-
-  virtualisation.docker = {
-    enable = true;
-    daemon.settings = {
-      features = {
-        buildkit = true;
-      };
-    };
-    autoPrune = {
-      enable = true;
-      dates = "weekly";
-    };
-  };
 
   xdg.portal = {
     enable = true;
@@ -141,7 +130,12 @@
     initialPassword = "1";
   };
 
-  home-manager.users.postmetalfun1992 = import ./home/postmetalfun1992.nix;
+  nix.settings.trusted-users = [
+    "root"
+    "postmetalfun1992"
+  ];
+
+  home-manager.users.postmetalfun1992 = import ../../home/postmetalfun1992.nix;
 
   system.stateVersion = "25.11";
 }
