@@ -31,7 +31,7 @@
     useXkbConfig = true;
   };
 
-  home-manager.users.postmetalfun1992 = import ../../home/postmetalfun1992.nix;
+  home-manager.users.postmetalfun1992 = import ../home/postmetalfun1992.nix;
 
   system.stateVersion = "25.11";
 }
