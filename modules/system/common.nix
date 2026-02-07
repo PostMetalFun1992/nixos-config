@@ -61,11 +61,6 @@
     wget
   ];
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-    font-awesome
-  ];
-
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
     gcc
@@ -97,25 +92,6 @@
       };
     };
   };
-
-  users.users.postmetalfun1992 = {
-    isNormalUser = true;
-    description = "PostMetalFun1992";
-    shell = pkgs.fish;
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-      "video"
-      "audio"
-      "docker"
-    ];
-    initialPassword = "1";
-  };
-
-  nix.settings.trusted-users = [
-    "root"
-    "postmetalfun1992"
-  ];
 
   home-manager.users.postmetalfun1992 = import ../../home/postmetalfun1992.nix;
 
