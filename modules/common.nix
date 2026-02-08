@@ -20,7 +20,13 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+
+    plugins = with pkgs; [
+      networkmanager-openvpn
+    ];
+  };
 
   time.timeZone = "Asia/Almaty";
   i18n.defaultLocale = "en_US.UTF-8";

@@ -31,5 +31,24 @@
       p = "podman";
       pc = "podman-compose";
     };
+
+    functions = {
+      nmcli-import-ovpn = {
+        body = ''
+          if test (count $argv) -eq 0
+            echo "Usage: nmcli-import-ovpn <file.ovpn>"
+            return 1
+          end
+
+          set vpn_file $argv[1]
+
+          nmcli connection import type openvpn file "$vpn_file"
+
+          and nmcli connection modify (basename "$vpn_file" .ovpn) ipv4.never-default true ipv6.never-default true
+
+          echo "ovpn file imported"
+        '';
+      };
+    };
   };
 }
