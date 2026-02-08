@@ -47,6 +47,8 @@
 
   home.packages = with pkgs; [
     bluetui
+    catppuccin-gtk
+    catppuccin-papirus-folders
     maim
     wl-clipboard
   ];
