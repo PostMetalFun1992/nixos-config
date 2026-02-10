@@ -43,6 +43,10 @@
 
     MOZ_ENABLE_WAYLAND = "1";
     XDG_CURRENT_DESKTOP = "sway";
+
+    # Wayland tweaks for Java / Swing apps
+    _JAVA_AWT_WM_NONREPARENTING = "1";
+    _JAVA_OPTIONS = "-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true";
   };
 
   home.packages = with pkgs; [
