@@ -27,9 +27,6 @@
 
       d = "docker";
       dc = "docker compose";
-
-      p = "podman";
-      pc = "podman-compose";
     };
 
     functions = {
