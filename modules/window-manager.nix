@@ -18,12 +18,14 @@
     ];
 
     config = {
-      river = {
-        default = [ "wlr" ];
-        "org.freedesktop.impl.portal.Desktop" = [ "gtk" ];
-        "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
-        "org.freedesktop.impl.portal.Settings" = [ "gtk" ];
+      sway = {
+        default = [ "gtk" ];
         "org.freedesktop.impl.portal.Screencast" = [ "wlr" ];
+        "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
+      };
+
+      common = {
+        default = [ "gtk" ];
       };
     };
   };
