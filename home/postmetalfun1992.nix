@@ -21,6 +21,7 @@
     ./gui/fuzzel.nix
     ./gui/mako.nix
     ./gui/firefox.nix
+    ./gui/gtk.nix
 
     ./security/ssh.nix
 
@@ -51,8 +52,6 @@
 
   home.packages = with pkgs; [
     bluetui
-    catppuccin-gtk
-    catppuccin-papirus-folders
     maim
     wl-clipboard
   ];
