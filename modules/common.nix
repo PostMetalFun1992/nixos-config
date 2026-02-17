@@ -35,4 +35,11 @@
     font = "Lat2-Terminus16";
     useXkbConfig = true;
   };
+
+  # networking.hosts = {
+  #   "154.57.164.78" = [
+  #     "fuzzing_fun.htb"
+  #     "hidden.fuzzing_fun.htb"
+  #   ];
+  # };
 }

@@ -20,7 +20,7 @@
     ./gui/i3status-rust.nix
     ./gui/fuzzel.nix
     ./gui/mako.nix
-    ./gui/firefox.nix
+    ./gui/brave.nix
     ./gui/gtk.nix
 
     ./security/ssh.nix
