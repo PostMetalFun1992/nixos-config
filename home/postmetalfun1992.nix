@@ -43,6 +43,8 @@
     COMPOSE_DOCKER_CLI_BUILD = "1";
 
     XDG_CURRENT_DESKTOP = "sway";
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
   };
 
   home.packages = with pkgs; [

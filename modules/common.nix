@@ -8,7 +8,7 @@
 {
   system.stateVersion = "25.11";
 
-  nixpkgs.config.allowUnfree = false;
+  nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
