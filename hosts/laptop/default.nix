@@ -9,7 +9,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./gpu-intel.nix
 
     ../../modules/bluetooth.nix
     ../../modules/common.nix
