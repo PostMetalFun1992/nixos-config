@@ -12,7 +12,6 @@ style = "Regular"
 [window]
 decorations = "None"
 title = "Alacritty"
-opacity = 0.85
 
 [window.padding]
 x = 5
