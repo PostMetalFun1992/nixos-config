@@ -7,6 +7,7 @@
   };
 
   services.xserver.videoDrivers = [ "nvidia" ];
+  boot.kernelParams = [ "acpi_backlight=native" ];
 
   hardware.nvidia = {
     modesetting.enable = true;
