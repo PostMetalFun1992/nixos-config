@@ -1,2 +1,2 @@
-output eDP-2 mode 2560x1440@240.002Hz scale 1.25
+output eDP-1 mode 2560x1440@240.002Hz
 output * bg ~/backgrounds/wallhaven.jpg fill
