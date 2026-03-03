@@ -9,6 +9,7 @@
     pciutils
     pulseaudio
     pulsemixer
+    unzip
     usbutils
     vim
     wget
