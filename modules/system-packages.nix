@@ -5,6 +5,7 @@
     brightnessctl
     curl
     git
+    lima
     nixfmt
     pciutils
     pulseaudio

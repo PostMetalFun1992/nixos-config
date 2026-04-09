@@ -48,6 +48,7 @@
   };
 
   home.packages = with pkgs; [
+    ansible
     bluetui
     maim
     wl-clipboard
