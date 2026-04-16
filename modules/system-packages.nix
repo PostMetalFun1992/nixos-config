@@ -12,7 +12,7 @@
     pulsemixer
     unzip
     usbutils
-    vim
+    neovim
     wget
   ];
 
