@@ -18,6 +18,7 @@
     ./gui/sway.nix
     ./gui/swaylock.nix
     ./gui/i3status-rust.nix
+    ./gui/waybar.nix
     ./gui/fuzzel.nix
     ./gui/mako.nix
     ./gui/brave.nix
