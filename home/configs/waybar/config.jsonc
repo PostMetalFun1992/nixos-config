@@ -23,12 +23,11 @@
             "1": [],
             "2": [],
             "3": [],
-            "4": [],
-            "5": []
+            "4": []
         }
     },
     "sway/language": {
-        "format": "{short}"
+        "format": "\uf11c  {short}"
     },
 
     "clock": {
