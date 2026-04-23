@@ -1,1 +1,3 @@
-exec_always pkill waybar; waybar
+bar {
+    swaybar_command waybar
+}
